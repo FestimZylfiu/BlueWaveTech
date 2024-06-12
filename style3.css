@@ -1,0 +1,316 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    transition: 0.5s;
+}
+
+.header:hover::before {
+    left: 100%;
+}
+
+.logo {
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 35px;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #f00;
+}
+
+#menu-icon {
+    font-size: 36px;
+    color: #fff;
+    display: none;
+}
+
+/* BREAKPOINTS */
+@media (max-width: 992px) {
+    .header {
+      padding: 1.25rem 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+      display: block;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 0.5rem 4%;
+      display: none;
+    }
+
+    .navbar.active {
+      display: block;
+    }
+
+    .navbar a {
+      display: block;
+      margin: 1.5rem 0;
+    }
+
+    .nav-bg {
+      position: absolute;
+      top: 79px;
+      left: 0;
+      width: 100%;
+      height: 295px;
+      background: rgba(255, 255, 255, 0.1);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      z-index: 99;
+      display: none;
+    }
+
+    .nav-bg.active {
+      display: block;
+    }
+}
+
+body {
+    background-color: black;
+}
+
+.product-card-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between; 
+margin: 20px; 
+}
+
+.product-card {
+position: relative;
+max-width: 390px;
+width: calc(33.333% - 20px); 
+border-radius: 18px;
+padding: 20px 30px 30px 30px;
+background: #e1e1e1;
+z-index: 3;
+overflow: hidden;
+box-shadow:
+    -28px 27px 37.5px rgba(0,0,0,0.53),
+    10px -19px 37.5px rgb(255,255,255),
+    inset 4px -4px 8px rgb(0,0,0,0.53),
+    inset -5px 5px 12px #fff;
+margin: 10px;
+box-sizing: border-box; 
+margin-top: 150px;
+}
+
+.product-card:nth-child(3n+1) {
+    margin-left: 0;
+}
+
+.product-card:nth-child(3n+2) {
+    margin-left: 20px;
+}
+
+.product-card:nth-child(3n+3) {
+    margin-left: 40px;
+}
+
+.product-card .logo-cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-card .logo-cart .back i {
+    font-size: 20px;
+    color: #0899ee;
+    cursor: pointer;
+    transition: color 0.3 ease;
+    text-shadow: -5px 3px 4px rgba(0,0,0,0.431);
+}
+
+.product-card .logo-cart .back span {
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 9px;
+    color: #404040;
+}
+
+.product-card .logo-cart i:hover {
+    color: #333;
+}
+
+.product-card .main-images {
+    position: relative;
+    height: 250px;
+    margin-bottom: 90px;
+}
+
+.product-card .main-images img {
+    position: absolute;
+    height: 270px;
+    width: 208px;
+    object-fit: cover;
+    left: 62px;
+    top: 35px;
+    border-radius: 25px;
+    z-index: 1;
+    opacity: 0;
+    transition: transform 0.5s ease;
+    box-shadow: -13px 20px 20px rgb(51 51 51 /59%);
+}
+
+.product-card .main-images img.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.product-card .show-details .show_name {
+    font-size: 24px;
+    font-weight: bolder;
+    color: #3d3d3d;
+    user-select: none;
+    display: flex;
+}
+
+.product-card .color-price .color-option {
+    display: flex;
+    align-items: center;
+}
+
+.color-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.color-price .color-option .color {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3d3d3d;
+    margin-right: 8px;
+}
+
+.color-option .circles {
+    display: flex;
+    align-items: center;
+}
+
+.color-option .circles .circle {
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 6px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: inset 4px -4px 5px rgb(0 0 0 / 49%)
+    -5px 5px 10px rgb(0 0 0 / 70%);
+}
+
+.color-option .circles .circle.white.active {
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    box-shadow: inset 5px -4px 6px rgb(0 0 0 / 39%)
+    -10px 10px 15px rgb(0 0 0 / 49%);
+}
+
+.color-option .circles .circle.blue {
+    background: #2f68f6;
+}
+
+.color-option .circles .circle.blue.active {
+    width: 24px;
+    height: 24px;
+    background: #2f68f6;
+    box-shadow: inset 5px -4px 6px rgb(0 0 0 / 50%)
+    -10px 10px 15px rgb(0 0 0 / 49%);
+}
+
+.color-option .circles .circle.black {
+    background: #3d3d3d;
+}
+
+.color-option .circles .circle.black.active {
+    width: 24px;
+    height: 24px;
+    background: #3d3d3d;
+    box-shadow: inset 5px -4px 6px rgb(0 0 0 / 50%)
+    -10px 10px 15px rgb(0 0 0 / 49%);
+}
+
+.color-price .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-price .price .price_num {
+    font-size: 30px;
+    font-weight: 700;
+    color: #3d3d3d;
+}
+
+.product-card .button button {
+    height: 60px;
+    width: 80%;
+    border-radius: 50px;
+    margin: 34px;
+    background: #0899ee;
+    outline: none;
+    border: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: #e2e2e1;
+    transition: all 0.4s ease;
+    text-shadow: 2px 2px 4px rgba(46,46,46,0.949),
+    -2px -2px 4px #70bcff;
+    box-shadow:
+    inset 2px -3px 3px 0 rgb(5 78 127),
+    -5px 4px 7px 0 rgb(0 0 0 / 75%),
+    3px -4px 10px 1px rgb(255 255 255);
+}
+
+button:hover {
+    transform: translate(-5px) !important;
+}
+
