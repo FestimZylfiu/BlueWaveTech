@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
-	<link rel="stylesheet" href="path/to/swiper.min.css">
+	
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
@@ -17,13 +17,14 @@
 	
 
 	<header class="header">
-        <a href="#" class="logo">Logo</a>
+        <a href="#" class="logo">BlueWaveTech</a>
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
             <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Product</a>
-            <a href="#">Contact</a>
+            <a href="about.php">About</a>
+            <a href="product.php">Product</a>
+            <a href="contact.php">Contact</a>
+            <a href="login.php">Login</a>
         </nav>
     </header>
     <div class="nav-bg"></div>
@@ -45,7 +46,7 @@
     </div>
 
 <section class="category" data-aos="fade-up">
-   <h3 class="heading">Kategorit</h3>
+   <h3 class="heading">Category</h3>
    <div class="swiper category-slider">
       <div class="swiper-wrapper">
 
@@ -61,22 +62,22 @@
 
    <a href="category.php?category=camera" class="swiper-slide slide">
       <img src="img/icon-3.png" alt="">
-      <h3>kamera</h3>
+      <h3>camera</h3>
    </a>
 
    <a href="category.php?category=smartphone" class="swiper-slide slide">
       <img src="img/icon-4.png" alt="">
-      <h3>telefon</h3>
+      <h3>phone</h3>
    </a>
 
    <a href="category.php?category=watch" class="swiper-slide slide">
       <img src="img/icon-5.png" alt="">
-      <h3>ore</h3>
+      <h3>watch</h3>
    </a>
 
     <a href="category.php?category=watch" class="swiper-slide slide">
       <img src="img/icon-6.png" alt="">
-      <h3>tastatur</h3>
+      <h3>keyboard</h3>
    </a>
 
     </div>
@@ -114,7 +115,7 @@
 
 
 
-<h3 class="heading-2">Arritjet e reja</h3>
+<h3 class="heading-2">New arrivals</h3>
 
 <div class="container1" data-aos="zoom-in-up">
     <div class="card">
@@ -171,25 +172,26 @@
        
 </div>
 
+
 <section class="footer">
-        <div class="box-container" data-aos="zoom-in">
+        <div class="box-container1" data-aos="zoom-in">
     
-            <div class="box">
-                <h3>Lokacioni ynë</h3>
-                <a href="#"> <i class="fas fa-map-marker-alt"></i>Prizren</a>
+            <div class="box1">
+                <h3>Our Location</h3>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i>New York</a>
                 
             </div>
     
-            <div class="box">
-                <h3>Qasje të shpejtë</h3>
+            <div class="box1">
+                <h3>Quick access</h3>
                 <a href="index.html"> <i class="fas fa-arrow-right"></i>Home</a>
-                <a href="produktet.html"> <i class="fas fa-arrow-right"></i>Produktet</a>
+                <a href="produktet.html"> <i class="fas fa-arrow-right"></i>Products</a>
                 <a href="contact.html"> <i class="fas fa-arrow-right"></i>Contact</a>
                 
             </div>
     
     
-            <div class="box">
+            <div class="box1">
                 <h3>Contact info</h3>
                 <a href="#"> <i class="fas fa-phone"></i> +383 44 323 105</a>
                 <a href="#"> <i class="fas fa-envelope"></i>ecommerce@gmail.com </a>
